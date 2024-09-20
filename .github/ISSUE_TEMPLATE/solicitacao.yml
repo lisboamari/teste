@@ -1,0 +1,43 @@
+name: Novo serviço
+description: Solicitação de novo serviço
+title: "[NUVEM]: "
+labels: ["nuvem", "solicitação"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Para melhor análise de sua solicitação, preencha com o máximo de informações possíveis
+  - type: input
+    id: responsavel
+    attributes:
+      label: Responsável para contato
+      description: Indique o contato para comunicações a respeito da solicitação
+      placeholder: ex. José
+    validations:
+      required: true
+  - type: textarea
+    id: servico
+    attributes:
+      label: Novo serviço solicitado
+      description: Insira as informações a respeito do serviço a ser solicitado
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: arquitetura
+    attributes:
+      label: Há arquitetura associada?
+      multiple: true
+      options:
+        - X
+        - Y
+        - Z
+  - type: checkboxes
+    id: termos
+    attributes:
+      label: Termos e condições
+      description: Ao solicitar este serviço, você concorda com o normativo interno
+      options:
+        - label: Eu concordo e estou ciente do normativo interno
+          required: true
